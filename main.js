@@ -3,6 +3,7 @@ const stack1 = new Array(); const stack2 = new Array(); const stack3 = new Array
 const stack4 = new Array(); const stack5 = new Array(); const stack6 = new Array();
 const stack7 = new Array();
 let count = 1;
+let WinBool = false;
 
 
 
@@ -132,6 +133,17 @@ btn7.addEventListener("click",()=>{
 
 
 
+function WinBoolean(player){
+    console.log(`THe game is over, ${player} have won the game!`)
+    for(i=0;i<game.children.length;i++){
+        game.children[i].disabled = trun
+    
+    }
+}
+
+
+
+
 
 
 function WinCheck(){
@@ -146,9 +158,13 @@ function WinCheck(){
         }
     if (count===4){
         console.log("The player one wins")
+        WinBool = trun
+        WinBoolean()
     }
     }
 }
+    
+
 
 
     
