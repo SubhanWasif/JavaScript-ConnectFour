@@ -2,6 +2,8 @@
 const stack1 = new Array(); const stack2 = new Array(); const stack3 = new Array();
 const stack4 = new Array(); const stack5 = new Array(); const stack6 = new Array();
 const stack7 = new Array();
+const restartbtn = document.querySelector("#restart");
+
 let count = 1;
 let WinBool = false;
 
@@ -137,8 +139,25 @@ function WinBoolean(player){
     console.log(`THe game is over, ${player} have won the game!`)
     for(i=0;i<game.children.length;i++){
         game.children[i].disabled = trun
-    
     }
+}
+
+
+restartbtn.addEventListener("click",restart)
+function restart(){
+    console.log('its working!!')
+    for(i=0;i<game.children.length;i++){
+        game.children[i].disabled = false;  
+        console.log(game.children[i].children)
+        for(j=0;j<game.children[i].children.length;j++){
+            colorclass = ['bg-violet-900','bg-green-900']
+            game.children[i].children[j].classList.remove(...colorclass);
+        }
+    }
+
+
+
+
 }
 
 
